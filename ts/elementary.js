@@ -19,14 +19,14 @@ exports.Elementary = void 0;
 var school_1 = require("./school");
 var Elementary = /** @class */ (function (_super) {
     __extends(Elementary, _super);
-    function Elementary(name, adress, directorName, schoolType, atsemName) {
-        var _this = _super.call(this, name, adress, directorName, schoolType) || this;
+    function Elementary(name, adress, directorName, schoolType, atsemName, person) {
+        var _this = _super.call(this, name, adress, directorName, schoolType, person) || this;
         _this.atsemName = atsemName;
         return _this;
     }
     Elementary.prototype.schoolPresentation = function () {
         console.log("".concat(this.schoolType, " ").concat(this.name, " vous souhaite la bienvenue, elle est situ\u00E9e ").concat(this.adress, " et son directeur est ").concat(this.directorName));
-        console.log("L'atsem de votre enfant se nomme ".concat(this.atsemName));
+        console.log("L'atsem de votre enfant se nomme ".concat(this.atsemName, ". Elle a ").concat(this.person.age, " ans et ses cheveux sont ").concat(this.person.hairColor));
     };
     return Elementary;
 }(school_1.School));
