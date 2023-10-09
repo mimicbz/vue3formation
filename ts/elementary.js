@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Elementary = void 0;
 var school_1 = require("./school");
 var Elementary = /** @class */ (function (_super) {
     __extends(Elementary, _super);
@@ -24,9 +25,9 @@ var Elementary = /** @class */ (function (_super) {
         return _this;
     }
     Elementary.prototype.schoolPresentation = function () {
+        console.log("".concat(this.schoolType, " ").concat(this.name, " vous souhaite la bienvenue, elle est situ\u00E9e ").concat(this.adress, " et son directeur est ").concat(this.directorName));
         console.log("L'atsem de votre enfant se nomme ".concat(this.atsemName));
     };
     return Elementary;
 }(school_1.School));
-var elementarySchool = new Elementary("Ecole Jean de la Fontaine", "Rue des noisetiers à Toulouse", "Mr Eddy Donmarcel", "Primaire", "Camille Onette");
-elementarySchool.schoolPresentation();
+exports.Elementary = Elementary;

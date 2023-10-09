@@ -1,6 +1,6 @@
 import { School } from './school';
 
-class Elementary extends School {
+export class Elementary extends School {
     
     atsemName: string;
     
@@ -17,6 +17,3 @@ class Elementary extends School {
   	}
 
 }
-
-const elementarySchool = new Elementary("Ecole Jean de la Fontaine", "Rue des noisetiers à Toulouse", "Mr Eddy Donmarcel", "Primaire", "Camille Onette");
-elementarySchool.schoolPresentation();

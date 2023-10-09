@@ -9,10 +9,8 @@ var School = /** @class */ (function () {
         this.schoolType = schoolType;
     }
     School.prototype.greet = function () {
-        console.log("".concat(this.schoolType, " ").concat(this.name, " vous souhaite la bienvenue, elle est situ\u00E9e ").concat(this.adress, " et son directeur est ").concat(this.directorName));
+        console.log("".concat(this.schoolType, " ").concat(this.name, " vous souhaite la bienvenue, elle est situ\u00E9e ").concat(this.adress, " et son directeur est ").concat(this.directorName, " \r\t"));
     };
     return School;
 }());
 exports.School = School;
-var secondarySchool = new School("Lycée St Exupery", "Rue des lilas à Poitiers", "Mr Adam Troijours", "Le Lycée");
-secondarySchool.greet();

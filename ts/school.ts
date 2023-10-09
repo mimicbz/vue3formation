@@ -17,6 +17,3 @@ export class School {
     }
 
 }
-
-const secondarySchool = new School("Lycée St Exupery", "Rue des lilas à Poitiers", "Mr Adam Troijours", "Le Lycée");
-secondarySchool.greet();
