@@ -12,6 +12,7 @@ class Elementary extends School {
   	}
 
 	schoolPresentation() {
+		console.log(`${this.schoolType} ${this.name} vous souhaite la bienvenue, elle est située ${this.adress} et son directeur est ${this.directorName}`);
         console.log(`L'atsem de votre enfant se nomme ${this.atsemName}`);
   	}
 
