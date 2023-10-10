@@ -1,18 +1,30 @@
-import { createVuetify } from "vuetify";
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+import { createVuetify } from "vuetify"
+import colors from 'vuetify/lib/util/colors';
+
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
-import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
-
+import * as labsComponents from 'vuetify/labs/components'
 
 export default createVuetify({
-  components,
-  directives,
 
+  components: {
+    ...components,
+    ...labsComponents,
+  },
+  directives,
   icons: {
-    defaultSet: 'mdi',
-    aliases,
-    sets: {
-      mdi,
+    defaultSet: 'mdi', // This is already the default value - only for display purposes
+  },
+  theme: {
+    themes: {
+      light: {
+        dark: false,
+        colors: {
+          primary: colors.green.darken1,
+          secondary: colors.green.lighten4,
+        }
+      },
     },
-  }
+  },
 })
