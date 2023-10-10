@@ -19,8 +19,8 @@ export class School {
     }
         
     greet(){
-        console.log(`${this.schoolType} ${this.name} vous souhaite la bienvenue, elle est située ${this.adress} et son directeur est ${this.directorName}`);
-        console.log(`Le gardien a ${this.person.age} ans et ses cheveux sont ${this.person.hairColor}`);
+        console.log(`${this.schoolType} ${this.name} vous souhaite la bienvenue, elle est située ${this.adress} et son directeur est ${this.directorName}\r\n`);
+        console.log(`Le gardien a ${this.person.age} ans et ses cheveux sont ${this.person.hairColor}\r\n`);
     }
 
 }

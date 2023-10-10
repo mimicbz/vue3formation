@@ -11,7 +11,7 @@ var School = /** @class */ (function () {
     }
     School.prototype.greet = function () {
         console.log("".concat(this.schoolType, " ").concat(this.name, " vous souhaite la bienvenue, elle est situ\u00E9e ").concat(this.adress, " et son directeur est ").concat(this.directorName));
-        console.log("Le gardien a ".concat(this.person.age, " ans et ses cheveux sont ").concat(this.person.hairColor));
+        console.log("Le gardien a ".concat(this.person.age, " ans et ses cheveux sont ").concat(this.person.hairColor, "\r\n"));
     };
     return School;
 }());

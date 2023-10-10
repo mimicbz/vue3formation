@@ -13,8 +13,7 @@ export class Elementary extends School {
   	}
 
 	schoolPresentation() {
-		console.log(`${this.schoolType} ${this.name} vous souhaite la bienvenue, elle est située ${this.adress} et son directeur est ${this.directorName}`);
-
+		console.log(`${this.schoolType} ${this.name} vous souhaite la bienvenue, elle est située ${this.adress} et son directeur est ${this.directorName}\r\n`);
         console.log(`L'atsem de votre enfant se nomme ${this.atsemName}. Elle a ${this.person.age} ans et ses cheveux sont ${this.person.hairColor}`);
   	}
 

@@ -25,7 +25,7 @@ var Elementary = /** @class */ (function (_super) {
         return _this;
     }
     Elementary.prototype.schoolPresentation = function () {
-        console.log("".concat(this.schoolType, " ").concat(this.name, " vous souhaite la bienvenue, elle est situ\u00E9e ").concat(this.adress, " et son directeur est ").concat(this.directorName));
+        console.log("".concat(this.schoolType, " ").concat(this.name, " vous souhaite la bienvenue, elle est situ\u00E9e ").concat(this.adress, " et son directeur est ").concat(this.directorName, "\r\n"));
         console.log("L'atsem de votre enfant se nomme ".concat(this.atsemName, ". Elle a ").concat(this.person.age, " ans et ses cheveux sont ").concat(this.person.hairColor));
     };
     return Elementary;
