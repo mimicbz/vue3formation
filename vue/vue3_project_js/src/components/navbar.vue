@@ -25,9 +25,9 @@
     <v-navigation-drawer v-model="drawer" location="left" temporary>
         <v-list>
             <v-list-item @click="$router.push('/')">Home</v-list-item>   
-            <v-list-item @click="$router.push('profile')">Mon profil</v-list-item>   
-            <v-list-item @click="$router.push('search')">Recherche</v-list-item>   
-            <v-list-item @click="$router.push('favorites')">Mes favoris</v-list-item>   
+            <v-list-item @click="$router.push('/profile')">Mon profil</v-list-item>   
+            <v-list-item @click="$router.push('/search')">Recherche</v-list-item>   
+            <v-list-item @click="$router.push('/favorites')">Mes favoris</v-list-item>   
             <v-list-item v-if="!isAuthenticated" @click="$router.push('auth')">Se connecter</v-list-item>   
         </v-list>
     </v-navigation-drawer>

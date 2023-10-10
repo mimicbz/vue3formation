@@ -29,7 +29,7 @@ const router = createRouter({
       beforeEnter: createAuthGuard(app)
     },
     {
-      path: '/plant:plantId',
+      path: '/plant/:plantId',
       name: 'plant',
       component: Plant,
       beforeEnter: createAuthGuard(app)
