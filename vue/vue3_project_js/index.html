@@ -10,4 +10,10 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
+<script>
+    function _getLocalStorageFavoritePlants() {
+        const localStorageFavoritePlants = localStorage.getItem('favoritePlants');
+        return localStorageFavoritePlants ? JSON.parse(localStorageFavoritePlants) : null;
+    }
+</script>
 </html>

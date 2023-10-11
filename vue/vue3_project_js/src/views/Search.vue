@@ -5,6 +5,11 @@
             <v-btn size="small"
                    @click="$router.push({ name: 'plant', params: { plantId: item.id } })">Détails
             </v-btn>
+            <v-btn style="margin-left:10px;"
+                   size="md"
+                   :icon="(favorites ? favorites.find(f => f == item.id) : false) ? 'mdi-heart' : 'mdi-heart-outline'"
+                   @click="setFavorite(item.id)">
+            </v-btn>
         </template>
     </v-data-table>
 </template>
@@ -24,11 +29,12 @@
                     {key: 'id', title: 'Id'},
                     {key: 'common_name', title: 'Nom Commun'},
                     {key: 'scientific_name', title: 'Nom scientifique'},
-                    {key: 'year', title: 'Année'},
+                    {key: 'year', title: 'Découverte'},
                     {key: 'bibliography', title: 'Bibliographie'},
                     {key: 'actions', title: 'Actions', sortable: false},
                 ],
-                setBotanicDatas: trefleStore.setBotanicDatas
+                setBotanicDatas: trefleStore.setBotanicDatas,
+                favorites: _getLocalStorageFavoritePlants() ? _getLocalStorageFavoritePlants() : []
             }
         },
         computed: {
@@ -36,7 +42,6 @@
         },
         mounted() {
             let _vm = this;
-
             axios({
                 method: 'GET',
                 url: `https://trefle.io/api/v1/plants?token=vFofOYMiBLQolXay8HkRs0RfnDYNnxtKs3kfzP4lOC4`,
@@ -47,5 +52,18 @@
             });
 
         },
+        methods: {
+            
+            setFavorite(newId) {
+                if (this.favorites.find(f => f == newId)) {
+                    this.favorites = this.favorites.filter(f => f !== newId);
+                } else {
+                    this.favorites.push(newId);
+                }
+                console.log(this.favorites);
+                localStorage['favoritePlants'] = JSON.stringify(this.favorites);
+            },
+            
+        }
     }
 </script>
