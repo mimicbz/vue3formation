@@ -11,12 +11,8 @@
       ></v-text-field>
 
         <v-spacer></v-spacer>
-<!-- 
-        <v-btn variant="text" icon="mdi-magnify"></v-btn> -->
+        
         <v-btn variant="text" icon="mdi-account-circle"  @click="$router.push('profile')"></v-btn>
-
-        <!-- <v-btn variant="text" icon="mdi-filter"></v-btn> -->
-
         <v-btn color="white" v-if="!isAuthenticated" @click.prevent="login">Se connecter</v-btn>
         <v-btn color="white" v-else @click.prevent="logout">Déconnexion</v-btn>
 

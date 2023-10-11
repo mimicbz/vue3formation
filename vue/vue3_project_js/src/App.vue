@@ -3,7 +3,7 @@
     <Navbar />
 
     <v-main>
-      <v-container fill-height class="d-flex align-items-center">
+      <v-container fill-height>
         <router-view></router-view>
       </v-container>
     </v-main>

@@ -11,12 +11,15 @@
 
         <v-card-actions>
             <v-btn style="margin-left:10px;"
-                   size="md"
+                   color="secondary"
+                   size="small"
+                   variant="outlined"
                    :icon="(favorites ? favorites.find(f => f == currentPlant.id) : false) ? 'mdi-heart' : 'mdi-heart-outline'"
                    @click="setFavorite(currentPlant.id)">
             </v-btn>
             <v-spacer></v-spacer>
-            <v-btn :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+            <v-btn color="secondary"
+                   :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
                    @click="show = !show"
             ></v-btn>
         </v-card-actions>

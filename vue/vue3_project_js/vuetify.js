@@ -1,5 +1,6 @@
 import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 import {createVuetify} from "vuetify"
+import 'vuetify/styles'
 import colors from 'vuetify/lib/util/colors';
 
 import * as components from 'vuetify/components';
@@ -23,7 +24,7 @@ export default createVuetify({
                 dark: false,
                 colors: {
                     primary: colors.green.darken1,
-                    secondary: colors.green.lighten4,
+                    secondary: colors.green.darken3,
                 }
             }
         },

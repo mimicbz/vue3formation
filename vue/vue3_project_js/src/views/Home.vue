@@ -1,5 +1,5 @@
 <template>
-    <h1>Bienvenue sur <b>Mon Jardin Botanique</b></h1>
+    <h1 class="mb-4">Bienvenue sur <b>Mon Jardin Botanique</b></h1>
     <p>Les plantes (Plantae) sont des organismes photosynthétiques et autotrophes,
        caractérisés par des cellules végétales. Elles forment l'un des règnes des
        Eukaryota. Ce règne est un groupe monophylétique comprenant les plantes

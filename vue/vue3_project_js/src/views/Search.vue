@@ -2,11 +2,14 @@
     <h1>Liste des plantes</h1>
     <v-data-table v-if="botanicDatas" :headers="headers" :items="botanicDatas" :search="search">
         <template v-slot:item.actions="{ item }">
-            <v-btn size="small"
+            <v-btn color="secondary"
+                   size="small"
                    @click="$router.push({ name: 'plant', params: { plantId: item.id } })">Détails
             </v-btn>
-            <v-btn style="margin-left:10px;"
-                   size="md"
+            <v-btn color="secondary"
+                   style="margin-left:10px;"
+                   size="small"
+                   variant="outlined"
                    :icon="(favorites ? favorites.find(f => f == item.id) : false) ? 'mdi-heart' : 'mdi-heart-outline'"
                    @click="setFavorite(item.id)">
             </v-btn>
@@ -53,7 +56,7 @@
 
         },
         methods: {
-            
+
             setFavorite(newId) {
                 if (this.favorites.find(f => f == newId)) {
                     this.favorites = this.favorites.filter(f => f !== newId);
@@ -63,7 +66,7 @@
                 console.log(this.favorites);
                 localStorage['favoritePlants'] = JSON.stringify(this.favorites);
             },
-            
+
         }
     }
 </script>
