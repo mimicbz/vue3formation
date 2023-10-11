@@ -3,7 +3,7 @@
     <Navbar />
 
     <v-main>
-      <v-container fluid fill-height>
+      <v-container fill-height class="d-flex align-items-center">
         <router-view></router-view>
       </v-container>
     </v-main>
@@ -15,3 +15,10 @@
 import Navbar from './components/navbar.vue';
 import { RouterLink, RouterView } from 'vue-router'
 </script>
+
+<style lang="scss">
+    .v-container{
+        max-width:1200px !important;
+        margin:0 auto;
+    }
+</style>
