@@ -28,9 +28,9 @@ export default {
     computed: {
         ...mapState(useMyStore, ['count'])
     },
-    mounted() {
+    async mounted() {
         if (!this.botanicDatas) {
-            axios({
+            await axios({
                 method: 'GET',
                 url: `https://trefle.io/api/v1/plants?token=vFofOYMiBLQolXay8HkRs0RfnDYNnxtKs3kfzP4lOC4`,
                 headers: {
@@ -44,7 +44,8 @@ export default {
             });
         }
         this.setCurrentPlant(this.botanicDatas.filter(p => p.Id === plantId));
-
+debugger
+        console.log(this.currentPlant);
     },
     mounted() {
         console.log(this.currentPlant);
